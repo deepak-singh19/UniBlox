@@ -1,29 +1,40 @@
+// Define a class for a cart item
+
+
 class CartItem {
     constructor(productId, quantity, price) {
-      this.productId = productId;
-      this.quantity = quantity;
-      this.price= price;
+      this.productId = productId;   // Product ID
+      this.quantity = quantity;     // Quantity of this item in the cart
+      this.price = price;           // Price of this item
     }
   }
   
+  // Define a class for an order
+
+
   class Order {
-    constructor(orderId, cartItems, totalAmount, discountCode ) {
-      this.orderId = orderId;
-      this.cartItems = cartItems;
-      this.totalAmount = totalAmount;
-      this.discountCode = discountCode;
-    
+    constructor(orderId, cartItems, totalAmount, discountCode) {
+      this.orderId = orderId;       // Order ID
+      this.cartItems = cartItems;   // An array of cart items
+      this.totalAmount = totalAmount; // Total order amount
+      this.discountCode = discountCode; // Discount code applied to the order
     }
   }
-
-const cart = {};
-let totalDiscountAmount={
-    discount:0
-};
-const orders = [];
-const discountCodes = {
-    "HOLI10": 10
-};
+  
+  
+  // Initialize objects and data
+  
+  const cart = {}; // The user's shopping cart (initially empty)
+  let totalDiscountAmount = {
+    discount: 0 // Initialize the total discount amount to 0
+  };
+  
+  const orders = []; // An array to store completed orders
+  
+  const discountCodes = {
+    "HOLI10": 10 // Predefined discount code with a value of 10
+  };
+  
 const Items=[
     {
       id:"1",
